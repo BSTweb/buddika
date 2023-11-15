@@ -1,0 +1,156 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(19, 64%, 54%);
+  --first-color-alt: hsl(19, 64%, 52%);
+  --title-color: hsl(19, 16%, 15%);
+  --text-color: hsl(19, 16%, 35%);
+  --text-color-light: hsl(19, 8%, 55%);
+  --body-color: hsl(19, 100%, 96%);
+  --container-color: hsl(19, 100%, 97%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --title-font: "Lora", serif;
+  --subtitle-font: "Dancing Script", cursive;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+.team-section{
+    width: 100%;
+    margin-top: 7rem;
+}
+
+.team-section .container{
+    width: 80%;
+    margin: auto;
+}
+
+.team-section .container .row{
+    width: 100%;
+    margin: auto;
+}
+
+.team-section .container .row .title{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.team-section .container .row .title h1{
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    color: var(--title-color);
+}
+
+.team-section .container .row .title p{
+    font-size: var(--font-medium);
+    margin: 30px 0px;
+    color: var(--text-color);
+}
+
+.team-section .container .team-card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.team-section .container .team-card .card{
+    width: 100%;
+    background-color: var(--container-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.team-section .container .team-card .card:hover{
+    background-color: var(--body-color);
+    transform: 0.3s;
+}
+
+.team-section .container .team-card .card .image-section img{
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+    border: 3px solid var(--first-color);  
+}
+
+.team-section .container .team-card .card .content{
+    width: 100%;
+    text-align: center;
+}
+
+.team-section .container .team-card .card .content h3{
+    font-size: var(--h3-font-size);
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+    color: var(--title-color);
+}
+
+.team-section .container .team-card .card .content h4{
+    font-size: var(--normal-font-size);
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+    color: var(--title-color);
+}
+
+.team-section .container .team-card .card .content p{
+    font-size: var(--small-font-size);
+    margin: 16px 0px;
+    line-height: 1.5;
+    color: var(--title-color);
+}
+
+@media screen and (max-width: 900px) {
+    .team-section .container .team-card{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .team-section .container .team-card{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .team-section .container .team-card{
+        grid-template-columns: 1fr;
+    }
+}
